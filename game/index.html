@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Skyline Courier — a flight game</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0a1622; }
+  #game { display: block; width: 100vw; height: 100vh; touch-action: none; cursor: crosshair; }
+  #fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+    color: #fff; font: 16px sans-serif; text-align: center; padding: 20px; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<div id="fallback">Skyline Courier needs JavaScript and a canvas-capable browser.</div>
+<script>
+  if (!window.HTMLCanvasElement) document.getElementById('fallback').style.display = 'flex';
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
